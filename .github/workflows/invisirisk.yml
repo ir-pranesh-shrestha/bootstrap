@@ -34,7 +34,7 @@ jobs:
           git checkout main
           git merge upstream/main --no-edit
           git remote set-url origin https://x-access-token:${{ secrets.MY_PAT }}@github.com/ir-paras-oli/bootstrap.git
-          git push origin main
+          git push https://x-access-token:${{ secrets.MY_PAT }}@github.com/ir-paras-oli/bootstrap main
 
       - name: Setup PSE
         uses: invisirisk/pse-action@latest
